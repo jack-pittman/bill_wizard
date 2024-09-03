@@ -26,9 +26,15 @@
         // if a file is selected, convert the csv file to a nested array and 
         // assign it to dataBucket
         if (!!userFile.files && userFile.files.length > 0) {
-            parseCSV(userFile.files[0]);
+            // parseCSV(userFile.files[0]);
+            csvWizard(userFile.files[0]);
         }
     });
+
+    // THE COMMANDER OF THE TROOPS
+    function csvWizard(file) {
+        parseCSV(file);
+    }
 
     // function to turn csv file into an array
     function parseCSV(file) {
@@ -72,6 +78,7 @@
         });
         
         dataBucket = formatArray(rows); 
+        // return rows; 
     }
 
     // Call the showTable function when the button is clicked
