@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BillWizard</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/upload-interface.css">
+
+</head>
+
+<body>
+
+    <div class="canvas">
+        <div class="title-container">
+
+            <h1>BILL<strong>WRANGLER</strong></h1>
+            <img id="wrangler" src="wrangler.jpg" alt="wrangler">
+
+            <div class="welcome-box">
+                <p id="welcome-message">hello world</p>
+            </div>
+        </div>
+        <div class="upload-container">
+            <div class="upload-file-object">
+                <p id="upload-message">UPLOAD FILE HERE</p>
+                <div class="file-image">
+                    <!-- <p>-_-</p> -->
+                    <img src="uploadicon.png" id="wrangler">
+                </div>
+                <div class="choose-file">
+                    <input type="file" id="file">
+                </div>
+                
+                <div class="checkbox">
+                    <p>flip rows/cols?</p>
+                    <input type="checkbox" id="checkbox" checked/>
+                </div>
+            </div>
+
+            <div class="checkbox">
+                <button id="show-table">create table</button>
+                <button id="show-table">create graph</button>
+            </div>
+        </div>
+        <div class="table-frame">
+            <p>TABLE</p>
+            <table id="table"></table>
+        </div>
+        <div class="table-frame">
+            <p><strong>GRAPH</strong></p>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>&copy; 2024 Jack Pittman. <br> All rights reserved.</p>
+    </div>
+    <script src="js/ghostwriter.js"></script>
+    <script src="js/csv-wizard2.0.js"></script>
+
+</body>
+</html>

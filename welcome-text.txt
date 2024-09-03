@@ -1,0 +1,9 @@
+Welcome to Bill Wrangler! <br><br>
+
+Using AWS Cost Explorer, it is possible to download custom billing reports as .csv files. <br><br>
+
+This tool aims to make the process of analyzing and 'exploring' these files more convenient. <br><br>
+
+Simply upload each file, grouping by the desired dimension, and this tool will generate graphs and download-able tables! <br><br>
+
+Happy Wrangling! 
