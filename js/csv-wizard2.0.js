@@ -19,9 +19,9 @@
     if (!userFile) {
         return; 
     }
+    // EVENT LISTENERS • EVENT LISTENERS • EVENT LISTENERS • EVENT LISTENERS • EVENT LISTENERS • EVENT LISTENERS • EVENT LISTENERS • 
 
     // Add an event listener to handle file selection
-    // POTENTIALLY CHANGE THIS TO A BUTTON PRESS EVENT LISTENER????
     userFile.addEventListener('change', function() {
         // if a file is selected, convert the csv file to a nested array and 
         // assign it to dataBucket
@@ -31,7 +31,36 @@
         }
     });
 
-    // THE COMMANDER OF THE TROOPS
+    // Call the showTable function when the button is clicked
+    tableButton.addEventListener('click', function() {
+        showTable(dataBucket); 
+        setTableTitle();
+        // call price alert (from separate file ) <––––––––––––––––––––––––––––––––––––––––––––––––– from priceAlert.js
+        priceAlert();
+    });
+
+
+
+    // FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • 
+
+    function setTableTitle() {
+        var fileInput = document.getElementById('file');
+        var tableTitle = document.getElementById('table-title');
+
+        var fileName; 
+
+        if (fileInput.files.length > 0) {
+            // Get the first file object from the files array
+            var file = fileInput.files[0];
+            
+            // Get the file name
+            fileName = file.name;
+        }
+
+        tableTitle.textContent = fileName; 
+    }
+
+    // THE CSV Commander
     function csvWizard(file) {
         parseCSV(file);
     }
@@ -81,15 +110,9 @@
         // return rows; 
     }
 
-    // Call the showTable function when the button is clicked
-    tableButton.addEventListener('click', function() {
-        showTable(dataBucket); 
-    });
-
     function showTable(dataBucket) {
         //Check if the checkbox with id="checkbox" is checked
         var isChecked = document.getElementById("checkbox").checked;
-
         console.log("checkbox status:" + isChecked);
 
         dataBucket = isChecked ? flipRowsAndColumns(dataBucket) : dataBucket;
@@ -102,7 +125,6 @@
 
 
         var firstRow = dataBucket[0];
-
         var row = document.createElement('tr');
 
         firstRow.forEach(function(cellData) {

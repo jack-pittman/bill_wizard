@@ -58,6 +58,14 @@
 .checkbox {
     display: flex; 
     flex-direction: row; 
+    /* gap: 10px;  */
+    /* padding: 10px;  */
+    margin: 0px; 
+    color: var(--color-checkbox-text);
+}
+.upload-box {
+    display: flex; 
+    flex-direction: row; 
     gap: 10px; 
     padding: 10px; 
     margin: 0px; 
