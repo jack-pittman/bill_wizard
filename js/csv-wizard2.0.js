@@ -39,8 +39,6 @@
         priceAlert();
     });
 
-
-
     // FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • 
 
     function setTableTitle() {

@@ -47,15 +47,23 @@ table th {
     text-align: center;
 }
 
+/* Styles for small increase */
 #small-increase {
     background-color: rgb(255, 206, 200);
 }
 
+/* Styles for medium increase */
 #medium-increase {
     background-color: rgb(255, 149, 137);
 }
 
+/* Styles for large increase */
 #large-increase {
     background-color: rgb(250, 97, 80);
-    color: white; 
+    /* color: white;  */
+}
+
+/* Example of adding transition effect */
+#small-increase, #medium-increase, #large-increase {
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
