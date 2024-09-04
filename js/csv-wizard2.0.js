@@ -34,16 +34,18 @@
     // Call the showTable function when the button is clicked
     tableButton.addEventListener('click', function() {
         showTable(dataBucket); 
-        setTableTitle();
+        showGraph();
+        setTitles();
         // call price alert (from separate file ) <––––––––––––––––––––––––––––––––––––––––––––––––– from priceAlert.js
         priceAlert();
     });
 
     // FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • 
 
-    function setTableTitle() {
+    function setTitles() {
         var fileInput = document.getElementById('file');
         var tableTitle = document.getElementById('table-title');
+        var graphTitle = document.getElementById('graph-title');
 
         var fileName; 
 
@@ -54,13 +56,26 @@
             // Get the file name
             fileName = file.name;
         }
-
-        tableTitle.textContent = fileName; 
+        graphTitle.textContent = "GRAPH (" + fileName +")"; 
+        tableTitle.textContent = "TABLE (" + fileName +")";  
     }
 
     // THE CSV Commander
     function csvWizard(file) {
         parseCSV(file);
+
+        // take dataBucket (which is the array we used to populate table) and send it to a 
+        // function in charts.js that converts the array to valuable chart data
+        arrayToChart();
+    }
+
+    // EVENTUALLY I WANT THIS FUNCTION TO BE IN THE CHARTS.JS FILE
+    function arrayToChart() {
+        console.log('Converting parsed csv into a fancy cool graph');
+    }
+
+    function showGraph() {
+        var graph = document.getElementById('chart');
     }
 
     // function to turn csv file into an array

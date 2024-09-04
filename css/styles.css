@@ -36,6 +36,13 @@ p {
     font-weight: lighter; 
     color: black; 
 }
+.spacer {
+    padding: 100px; 
+}
+.copyright {
+    text-align: center;
+    padding: 10px; 
+}
 #wrangler {
     width: 50px; 
     height: 50px; 

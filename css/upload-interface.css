@@ -4,7 +4,6 @@
 
 
     --color-greenish-gray: rgb(219, 240, 234);
-    --color-white: white;
 
     --color-dark-gray: rgb(80, 80, 80);
 
@@ -36,7 +35,7 @@
     border-radius: 10px; 
     margin: 10px;
     background-color: var(--color-greenish-gray);
-    border: solid 2px var(--color-white); 
+    border: solid 2px white; 
 }
 
 .upload-file-object p {
@@ -80,6 +79,26 @@
 }
 .file-image p {
     font-weight: bold; 
+}
+.button {
+    background-color: rgb(219, 240, 234);
+    border: solid 1px white;
+    border-radius: 10px; 
+    color: rgb(84, 98, 93);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: bold; 
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-button-greenish);
+    background-color: white;
 }
 #upload-image {
     width: 50px; 
