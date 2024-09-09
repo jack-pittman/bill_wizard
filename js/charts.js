@@ -1,87 +1,71 @@
-var tableButton = document.getElementById('show-table');
+const NUM_LINES = 5; 
 
-tableButton.addEventListener('click', function() {
-    document.getElementById('chart').style.display = 'block';
+var data = [
+    [23, 45, 67, 34, 89, 12, 56, 78, 91],
+    [15, 32, 47, 88, 54, 23, 67, 44, 29],
+    [98, 76, 45, 23, 67, 89, 12, 34, 56],
+    [11, 22, 33, 44, 55, 66, 77, 88, 99],
+    [42, 58, 73, 19, 84, 63, 27, 91, 38]
+  ];
 
-    var options = {
-        series: [{
-        name: "SageMaker",
-        data: [4849,	5029,	4872,	5029,	4560,	4262,	5247,	5931,	9227,	7604,	8252,	7674]
-        },
-        {
-        name: "RDS",
-        data: [3024,	3875,	5552,	5340,	4453,	4392,	4881,	4808,	5568,	5826,	5549,	5124]
-        },
-        {
-        name: 'Open Search',
-        data: [2602,	2655,	2650,	2721,	2836,	3187,	3315,	3259,	5088,	4121,	4769,	4546]
+var categories = [1991,1992,1993,1994,1995,1996,1997, 1998,1999];
+
+var names = ['sales', 'sales', 'sales', 'sales', 'sales'];
+
+var series = data.map((d, i) => ({
+    name: names[i],
+    data: d
+}));
+
+function setData(arr) {
+    data = [];
+    categories = [];
+    names = [];
+
+    for (let i = 0; i < NUM_LINES; i++) {
+        if (i == 0) {
+
         }
-    ],
-        chart: {
-        height: 350,
-        type: 'line',
-        zoom: {
-        enabled: false
-        },
-    },
-    dataLabels: {
-        enabled: false
-    },
-    stroke: {
-        width: [5, 7, 5],
-        curve: 'straight',
-        dashArray: [0, 8, 5]
-    },
-    title: {
-        text: '',
-        align: 'center'
-    },
-    legend: {
-        tooltipHoverFormatter: function(val, opts) {
-        return val + ' - <strong>' + opts.w.globals.series[opts.seriesIndex][opts.dataPointIndex] + '</strong>'
+
+        // once we're out of the header row, begin adding data
+        if (i > 0) {
+            // add first item in each row to names
+            names.push(arr[i][0]);
+
+            // add each row of the databucket to "data," excluding the first two columns (they're just labels and totals)
+            data.push(arr[i].slice(2));
         }
-    },
-    markers: {
-        size: 0,
-        hover: {
-        sizeOffset: 6
-        }
-    },
-    xaxis: {
-        categories: ['01 Jan', '02 Jan', '03 Jan', '04 Jan', '05 Jan', '06 Jan', '07 Jan', '08 Jan', '09 Jan',
-        '10 Jan', '11 Jan', '12 Jan'
-        ],
-    },
-    tooltip: {
-        y: [
-        {
-            title: {
-            formatter: function (val) {
-                return val + " ($)"
-            }
-            }
-        },
-        {
-            title: {
-            formatter: function (val) {
-                return val + " ($)"
-            }
-            }
-        },
-        {
-            title: {
-            formatter: function (val) {
-                return val + " ($)";
-            }
-            }
-        }
-        ]
-    },
-    grid: {
-        borderColor: '#f1f1f1',
     }
-    };
+
+    console.log("Names: " + names);
+    console.log("Data: " + data);
+
+    series = data.map((d, i) => ({
+        name: names[i],
+        data: d
+    }));
+
+}
+
+function createChart(arr) {
+    console.log(arr);
+
+    // set values, categories, names, and series
+    setData(arr);
     
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-    chart.render();
-});
+    var options = {
+        chart: {
+          type: 'line'
+        },
+        series: series,
+        xaxis: {
+          categories: categories
+        }
+      }
+      
+      var chart = new ApexCharts(document.querySelector("#chart"), options);
+      
+      chart.render();
+}
+
+window.createChart = createChart;

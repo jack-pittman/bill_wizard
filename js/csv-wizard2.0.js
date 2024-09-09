@@ -1,4 +1,5 @@
 (function () {
+
     // define constants
     var DELIMITER = ',';
     var NEWLINE = '\n';
@@ -33,11 +34,17 @@
 
     // Call the showTable function when the button is clicked
     tableButton.addEventListener('click', function() {
-        showTable(dataBucket); 
-        showGraph();
-        setTitles();
-        // call price alert (from separate file ) <––––––––––––––––––––––––––––––––––––––––––––––––– from priceAlert.js
-        priceAlert();
+        if (!(userFile.files && userFile.files.length > 0)) {
+            alert("no file uploaded. please upload a file!");
+        }
+        else {
+            showTable(dataBucket); 
+            // showGraph();
+            setTitles();
+            // call price alert (from separate file ) <––––––––––––––––––––––––––––––––––––––––––––––––– from priceAlert.js
+            priceAlert();
+            createChart(flipRowsAndColumns(dataBucket));
+        }
     });
 
     // FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • FUNCTIONS • 
