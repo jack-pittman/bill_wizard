@@ -22,10 +22,9 @@ function setData(arr) {
     categories = [];
     names = [];
 
-    for (let i = 0; i < NUM_LINES; i++) {
-        if (i == 0) {
+    categories = arr[0].slice(2);
 
-        }
+    for (let i = 0; i < NUM_LINES; i++) {
 
         // once we're out of the header row, begin adding data
         if (i > 0) {
@@ -39,6 +38,8 @@ function setData(arr) {
 
     console.log("Names: " + names);
     console.log("Data: " + data);
+    console.log("Categories: " + categories);
+
 
     series = data.map((d, i) => ({
         name: names[i],

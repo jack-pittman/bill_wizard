@@ -70,4 +70,5 @@ table th {
 
 #chart {
     /* display: none;  */
+    max-height: 200px;
 }
