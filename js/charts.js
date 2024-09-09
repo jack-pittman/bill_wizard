@@ -1,4 +1,4 @@
-const NUM_LINES = 7; 
+const NUM_LINES = 5; 
 
 var data = [
     [23, 45, 67, 34, 89, 12, 56, 78, 91],
@@ -22,19 +22,37 @@ function setData(arr) {
     categories = [];
     names = [];
 
+    let otherRow = new Array(categories.length).fill(0);
+
     categories = arr[0].slice(2);
 
-    for (let i = 0; i < NUM_LINES; i++) {
+    for (let i = 0; i < arr.length-1; i++) {
 
         // once we're out of the header row, begin adding data
-        if (i > 0) {
+        if (i > 0 && i < NUM_LINES) {
             // add first item in each row to names
             names.push(arr[i][0]);
 
             // add each row of the databucket to "data," excluding the first two columns (they're just labels and totals)
             data.push(arr[i].slice(2));
         }
+        if (i >= NUM_LINES) {
+            // iterate through each column
+            for (let j = 0; j < categories.length; j++) {
+                otherRow[j] = (otherRow[j] || 0) + Number(arr[i][j+2]);
+
+                console.log("Other Row: " + otherRow);
+                console.log("Current other row value [j]: " + otherRow[j]);
+                console.log("Current real row value: " + arr[i][j]);
+            }
+
+            // otherRow = arr[i].slice(2);
+            console.log("other row: "+ otherRow);
+        }
     }
+
+    data.push(otherRow);
+    names.push('other');
 
     console.log("Names: " + names);
     console.log("Data: " + data);
