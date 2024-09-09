@@ -1,12 +1,22 @@
 .table-frame {
-    width: 70%; /* Set the desired width of the container */
+    width: 80%; /* Set the desired width of the container */
     /* max-height: 400px; */
     overflow-x: auto; /* Enables horizontal scrolling */
     overflow-y: auto; /* Enables vertical scrolling if max-height is set */
-    border: 2px solid #ccc; /* Optional: Adds a border for clarity */
+    /* border: 2px solid #ccc; */
     padding: 10px; /* Optional: Adds padding inside the container */
 
     margin-top: 30px; 
+}
+.frame-row {
+    display: flex; 
+    flex-direction: column;
+    width: 60%;
+
+    /* gap: 20px;  */
+
+    align-items: center;
+    justify-content: center;
 }
 table {
     border-collapse: collapse;
@@ -16,7 +26,7 @@ table {
 
 table td, 
 table th {
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: 0.5em; 
     font-weight: lighter;
 }
@@ -33,8 +43,9 @@ table th {
     padding-top: 1em; 
     padding-bottom: 1em; 
     text-align: left;
-    background-color: rgb(166, 183, 198);
-    color: rgb(69, 80, 91);
+    background-color: #90b3a7;
+    color: #54625d;
+    color: white; 
 
     /* font-weight: bold; */
 }
@@ -70,5 +81,6 @@ table th {
 
 #chart {
     /* display: none;  */
-    max-height: 200px;
+    /* max-height: 100px; */
+    /* height: 500px;  */
 }

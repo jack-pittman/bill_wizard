@@ -1,4 +1,4 @@
-const NUM_LINES = 5; 
+const NUM_LINES = 7; 
 
 var data = [
     [23, 45, 67, 34, 89, 12, 56, 78, 91],
@@ -61,7 +61,8 @@ function createChart(arr) {
         series: series,
         xaxis: {
           categories: categories
-        }
+        },
+        colors: ['#54625d', '#677c75', '#7b978d', '#90b3a7', '#a5d0c1', '#baeddc'],
       }
       
       var chart = new ApexCharts(document.querySelector("#chart"), options);
