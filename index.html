@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="css/upload-interface.css">
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.1.2/css/buttons.dataTables.css" />
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script>
+
+    <!-- DataTables Buttons -->
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.1.2/js/buttons.print.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 </head>
 
 <body>
@@ -55,7 +77,11 @@
         </div>
         <div class="table-frame">
             <p id="table-title">TABLE</p>
-            <table id="table"></table>
+            <table id="table">
+                <thead id="thead"></thead>
+                <tbody id="tbody"></tbody>
+                <tfoot id="tfoot"></tfoot>
+            </table>
         </div>
         <div class="table-frame">
             <!-- Future Features:</p> -->
@@ -87,6 +113,13 @@
     <script src="js/csv-wizard2.0.js"></script>
     <script src="js/priceAlert.js"></script>
     <script src="js/charts.js"></script>
+    <script src="js/renderer.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.1.5/css/dataTables.dataTables.css" />
+  
+    <script src="https://cdn.datatables.net/2.1.5/js/dataTables.js"></script> -->
+
+
 
 </body>
 </html>

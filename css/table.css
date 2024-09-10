@@ -13,7 +13,6 @@
     flex-direction: column;
     width: 60%;
 
-    /* gap: 20px;  */
 
     align-items: center;
     justify-content: center;
@@ -26,7 +25,7 @@ table {
 
 table td, 
 table th {
-    /* border: 1px solid #ddd; */
+
     padding: 0.5em; 
     font-weight: lighter;
 }
@@ -43,11 +42,17 @@ table th {
     padding-top: 1em; 
     padding-bottom: 1em; 
     text-align: left;
-    background-color: #90b3a7;
-    color: #54625d;
-    color: white; 
+    background-color: rgb(182, 213, 213);
 
-    /* font-weight: bold; */
+    color: rgb(71, 98, 98);
+    /* color: white;  */
+
+    font-weight: lighter; 
+}
+
+tfoot tr {
+    /* font-weight: bold;  */
+    background-color: rgb(182, 213, 213)
 }
 
 #table-title {
@@ -59,18 +64,21 @@ table th {
 }
 
 /* Styles for small increase */
-#small-increase {
+tbody #small-increase {
     background-color: rgb(255, 206, 200);
+    border: solid 1px white; 
 }
 
 /* Styles for medium increase */
-#medium-increase {
+tbody #medium-increase {
     background-color: rgb(255, 149, 137);
+    border: solid 1px white; 
 }
 
 /* Styles for large increase */
-#large-increase {
+tbody #large-increase {
     background-color: rgb(250, 97, 80);
+    border: solid 1px white; 
     /* color: white;  */
 }
 
@@ -83,4 +91,25 @@ table th {
     /* display: none;  */
     /* max-height: 100px; */
     /* height: 500px;  */
+}
+
+/* DATATABLES COMPONENTS (to hopefully clean this up */
+
+.dt-buttons {
+    padding: 5px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+.dt-search {
+    padding: 5px; 
+    margin-top: 10px; 
+}
+
+.dt-info, .dt-paging {
+    padding: 5px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }

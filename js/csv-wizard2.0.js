@@ -1,3 +1,6 @@
+// USE GRID.JS? 
+// https://gridjs.io/
+
 (function () {
 
     // define constants
@@ -139,25 +142,43 @@
 
         // Get the table element by its ID
         var table = document.getElementById('table');
-    
+        var thead = document.getElementById('thead');
+        var tbody = document.getElementById('tbody');
+        var tfoot = document.getElementById('tfoot');
+
         // Clear any existing rows in the table (optional)
-        table.innerHTML = '';
+        thead.innerHTML = '';
+        tbody.innerHTML = '';
+        tfoot.innerHTML = '';
 
 
         var firstRow = dataBucket[0];
         var row = document.createElement('tr');
-
+    
         firstRow.forEach(function(cellData) {
             cell = document.createElement('th');
 
             cell.textContent = cellData;
             row.appendChild(cell);
         });
-
-        table.appendChild(row);
-
+        
         var remainingRows = dataBucket;
+        var lastRow = remainingRows.pop();
+        var footerRow = document.createElement('tr');
+
+        lastRow.forEach(function(cellData) {
+            cell = document.createElement('td');
+
+            cell.textContent = cellData;
+            footerRow.appendChild(cell);
+        });
+
         remainingRows.shift();
+
+        console.log("Last Row: " + lastRow)
+
+        thead.appendChild(row);
+        tfoot.appendChild(footerRow);
     
         // Iterate through the nested array (dataBucket)
         remainingRows.forEach(function(rowData) {
@@ -177,7 +198,7 @@
             });
     
             // Append the row to the table
-            table.appendChild(row);
+            tbody.appendChild(row);
         });
     }
 
