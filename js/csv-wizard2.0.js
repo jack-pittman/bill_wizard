@@ -8,6 +8,8 @@
     var NEWLINE = '\n';
     var AUTO_FORMAT_DATES = true; 
 
+    const LOOKUP_TABLE = lookupTable;
+
     // create empty 'bucket' for csv data
     var dataBucket = [];
 
@@ -41,7 +43,7 @@
             alert("no file uploaded. please upload a file!");
         }
         else {
-            showTable(dataBucket); 
+            showTable(addTagColumn(dataBucket)); // maybe call an "addTagColumn()"" function which, using a lookup table
             // showGraph();
             setTitles();
             // call price alert (from separate file ) <––––––––––––––––––––––––––––––––––––––––––––––––– from priceAlert.js
@@ -141,7 +143,7 @@
         dataBucket = isChecked ? flipRowsAndColumns(dataBucket) : dataBucket;
 
         // Get the table element by its ID
-        var table = document.getElementById('table');
+        // var table = document.getElementById('table');
         var thead = document.getElementById('thead');
         var tbody = document.getElementById('tbody');
         var tfoot = document.getElementById('tfoot');
@@ -175,7 +177,7 @@
 
         remainingRows.shift();
 
-        console.log("Last Row: " + lastRow)
+        // console.log("Last Row: " + lastRow)
 
         thead.appendChild(row);
         tfoot.appendChild(footerRow);
@@ -245,5 +247,13 @@
             return true; 
         }
         return false; 
+    }
+
+    function addTagColumn(arr) {
+        var result = arr; 
+        
+        // using LOOKUP_TABLE, append the correct tag to the end of each row. 
+
+        return result;
     }
 })();

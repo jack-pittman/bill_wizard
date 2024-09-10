@@ -105,6 +105,9 @@ tbody #large-increase {
 .dt-search {
     padding: 5px; 
     margin-top: 10px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .dt-info, .dt-paging {

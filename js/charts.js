@@ -41,22 +41,22 @@ function setData(arr) {
             for (let j = 0; j < categories.length; j++) {
                 otherRow[j] = (otherRow[j] || 0) + Number(arr[i][j+2]);
 
-                console.log("Other Row: " + otherRow);
-                console.log("Current other row value [j]: " + otherRow[j]);
-                console.log("Current real row value: " + arr[i][j]);
+                // console.log("Other Row: " + otherRow);
+                // console.log("Current other row value [j]: " + otherRow[j]);
+                // console.log("Current real row value: " + arr[i][j]);
             }
 
             // otherRow = arr[i].slice(2);
-            console.log("other row: "+ otherRow);
+            // console.log("other row: "+ otherRow);
         }
     }
 
     data.push(otherRow);
     names.push('other');
 
-    console.log("Names: " + names);
-    console.log("Data: " + data);
-    console.log("Categories: " + categories);
+    // console.log("Names: " + names);
+    // console.log("Data: " + data);
+    // console.log("Categories: " + categories);
 
 
     series = data.map((d, i) => ({
