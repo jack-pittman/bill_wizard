@@ -97,7 +97,6 @@
         if (!file || !FileReader) {
             return; 
         }
-
         // Create a new FileReader instance
         var reader = new FileReader();
 
@@ -110,7 +109,7 @@
         // Read the content of the file as a text string
         reader.readAsText(file);
     }
-
+    
     function flipRowsAndColumns(csvData) {
         return csvData[0].map((_, colIndex) =>
             csvData.map(row => row[colIndex])
