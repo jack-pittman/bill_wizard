@@ -1,8 +1,11 @@
 .table-frame {
     width: 80%; /* Set the desired width of the container */
     /* max-height: 400px; */
-    overflow-x: auto; /* Enables horizontal scrolling */
-    overflow-y: auto; /* Enables vertical scrolling if max-height is set */
+    
+    /* Enables horizontal scrolling */
+    overflow-x: auto; 
+    
+    overflow-y: auto; 
     /* border: 2px solid #ccc; */
     padding: 10px; /* Optional: Adds padding inside the container */
 
@@ -18,16 +21,16 @@
     justify-content: center;
 }
 table {
-    border-collapse: collapse;
     width: 100%;
-    font-family: Courier;
-}
+    font-family: Montserrat;
+    border-collapse: collapse;
 
+}
 table td, 
 table th {
 
     padding: 0.5em; 
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 table tr:nth-child(2n) {
@@ -100,14 +103,16 @@ tbody #large-increase {
     display: flex; 
     justify-content: center;
     align-items: center;
-
 }
 .dt-search {
     padding: 5px; 
     margin-top: 10px; 
+    margin-bottom: 20px; 
     display: flex; 
     justify-content: center;
     align-items: center;
+
+    font-family: Montserrat; 
 }
 
 .dt-info, .dt-paging {

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BillWizard</title>
+    <title>BillWrangler</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/table.css">
     <link rel="stylesheet" href="css/upload-interface.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <link rel="stylesheet" href="css/canvas.css">
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
@@ -32,58 +34,80 @@
 
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-</head>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rammetto+One&family=Skranji:wght@400;700&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet"></head>
 
 <body>
-    <div class="canvas">
-        <div class="title-container">
+    <div class="header">
+        <div class="right-side">
+            <h2>BILL WRANGLER</h2>
 
-            <h1>BILL<strong>WRANGLER</strong></h1>
-            <img id="wrangler" src="wrangler.jpg" alt="wrangler">
-
-            <div class="welcome-box">
-                <p id="welcome-message">hello world</p>
+            <div class="header-image-container">
+                <img id="wrangler" src="media/wrangler.png" alt="wrangler">
+            </div>
+            <!-- <div class="time-widget">
+                <h3>10:30 PM</h3>
+            </div> -->
+            <div class="info-widget">
+                <h3>?</h3>
             </div>
         </div>
+        <div class="jack-logo-container">
+            <div class="jack-logo">
+                <a href="https://jack-pittman.github.io/personal-website/">
+                    <img id="jlogo" src="media/j-logo.png" alt="Jack Pittman">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="canvas">
         <div class="upload-container">
             <div class="upload-file-object">
-                <p id="upload-message">UPLOAD FILE HERE</p>
-                <div class="file-image">
-                    <!-- <p>-_-</p> -->
-                    <img src="uploadicon.png" id="wrangler">
-                </div>
+                <h1 id="upload-message">Upload File Here</h1>
+    
                 <div class="choose-file">
                     <input type="file" id="file">
                 </div>
                 
             </div>
-            <div class="checkbox">
-                <p>flip rows/cols?</p>
-                <input type="checkbox" id="checkbox" checked/>
-            </div>
-            <div class="checkbox">
-                <p>highlight price changes?</p>
-                <input type="checkbox" id="checkbox1" checked/>
-            </div>
-            <div class="create-box">
-                <button class="button" id="show-table">CREATE REPORT</button>
+            <div class="checkbox-container">
+    
+                <label class="container">flip rows/cols?
+                    <input type="checkbox" checked="checked" id="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+    
+                <label class="container">highlight price changes?
+                    <input type="checkbox" checked="checked" id="checkbox1">
+                    <span class="checkmark"></span>
+                </label>
+                
             </div>
         </div>
+        <div class="create-box">
+            <button class="button" id="show-table">create report</button>
+        </div>
         <div class="frame-row">
-            <div class="table-frame">
+            <div class="table-frame" id="top-frame">
                 <p id="graph-title"></p>
                 <div id="chart"></div>
             </div>
         </div>
-        <div class="table-frame">
-            <p id="table-title"></p>
-            <table id="table">
-                <thead id="thead"></thead>
-                <tbody id="tbody"></tbody>
-                <tfoot id="tfoot"></tfoot>
-            </table>
-        </div>
-        <div class="table-frame">
+        <div class="frame-row">
+            <div class="table-frame">
+                <p id="table-title"></p>
+                <table id="table">
+                    <thead id="thead"></thead>
+                    <tbody id="tbody"></tbody>
+                    <tfoot id="tfoot"></tfoot>
+                </table>
+            </div>
+            <div class="table-frame">
+            </div>
         </div>
         <div class="spacer"></div>
     </div>

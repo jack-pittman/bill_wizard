@@ -49,6 +49,15 @@
             // call price alert (from separate file ) <––––––––––––––––––––––––––––––––––––––––––––––––– from priceAlert.js
             priceAlert();
             createChart(flipRowsAndColumns(dataBucket));
+
+            // SHOW GRAPH AND TABLE CONTAINERS
+            var frameRow = document.getElementsByClassName('frame-row');
+            for (var i = 0; i < frameRow.length; i++) {
+                frameRow[i].style.display = 'flex';
+            }
+
+            // HIDE 'CREATE REPORT' BUTTON
+            tableButton.style.display = 'none';
         }
     });
 

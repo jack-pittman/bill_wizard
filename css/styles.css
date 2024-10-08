@@ -1,50 +1,124 @@
-body, html {
+html, body {
+    margin: 0;
+    background: linear-gradient(white, #7A7A7A);
+
     margin: 0px; 
-    padding: 0px;
 }
-h1 {
-    font-family: Helvetica;
-    font-weight: lighter;
-}
-p {
-    font-family: Courier;
-}
-.canvas {
-    display: flex;
-    flex-direction: column;  
-    justify-content: center;
-    align-items: center;
-
-}
-.title-container {
+.header {
     display: flex; 
-    flex-direction: column;
-    
-    align-items: center;
-    justify-content: center;
+    flex-direction: row; 
+    justify-content: space-between;
+    /* justify-content: center; */
 
+
+    align-items: center;
+
+    margin: 0px; 
+    margin: 10px; 
+}
+.right-side {
+    display: flex; 
+    flex-direction: row; 
     justify-content: center;
-}
-.welcome-box {
-    /* background-color:gray; */
-    padding: 20px; 
+    align-items: center;
+
+    /* border: solid 1px black;  */
+    /* background-color: #F5CC31; */
+    padding: 5px; 
     border-radius: 50px; 
-    width: 500px; 
+
+    gap: 5px; 
 }
-.welcome-box p {
-    font-family: Courier; 
-    font-weight: lighter; 
+.jack-logo-container {
+    display: flex; 
+    flex-direction: row; 
+}
+
+#jlogo {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.right-side h2 {
+    font-family: 'Skranji';
+    font-family: 'Sulphur Point';
+    font-family: 'Bebas Neue'; 
+
+    font-weight: 100; 
+
+    font-size: 20px; 
+
+    color: white;
     color: black; 
+    /* color: #F5CC31;  */
+
+
+    margin: 0px; 
+    margin-left: 10px; 
+    /* margin-bottom: -5px;  */
+    margin-right: 5px; 
+
 }
-.spacer {
-    padding: 100px; 
+.time-widget {
+    background-color: #3197F5;
+    margin: 0px; 
+    padding: 0px; 
+    border-radius: 20px; 
+
 }
-.copyright {
-    text-align: center;
-    padding: 10px; 
+.time-widget h3 {
+    font-family: 'Skranji';
+    font-weight: 200; 
+    font-size: 12px; 
+    color: white; 
+
+    margin: 0px; 
+    padding: 5px; 
+    margin-right: 7px; 
+    margin-left: 7px; 
+}
+
+.info-widget {
+    /* background-color: white; */
+    /* background-color: #F5CC31; */
+
+    margin: 0px; 
+    padding: 0px; 
+    border-radius: 20px; 
+
+}
+.info-widget h3 {
+    font-family: 'Skranji';
+    font-family: 'Arial Black';
+    font-family: 'papyrus';
+    /* font-family: 'Bebas Neue'; */
+
+
+    font-weight: 800; 
+    font-size: 20px; 
+    color: #F5CC31; 
+
+    color: black; 
+
+    margin: 0px; 
+    padding: 3px; 
+    margin-right: 7px; 
+    margin-left: 7px; 
+    margin-bottom: -5px; 
+}
+#jlogo {
+    width: 70px; 
+    height: 40px; 
 }
 #wrangler {
-    width: 50px; 
-    height: 50px; 
-    margin-bottom: 30px; 
+    width: 30px; 
+    height: 30px; 
+}
+
+.copyright {
+    text-align: center;
+    font-family: Montserrat; 
+    color: rgb(178, 178, 178); 
+    font-weight: lighter; 
+    padding: 30px; 
 }

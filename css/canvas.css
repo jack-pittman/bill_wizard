@@ -1,0 +1,112 @@
+.canvas {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(rgb(255, 255, 255), #7A7A7A);
+
+    margin-top: 50px; 
+    margin-right: 100px; 
+    margin-left: 100px; 
+    border-radius: 50px; 
+
+}
+
+/* TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE TABLE  */
+
+#show-table {
+    background-color: black;
+    padding: 20px; 
+    border: none; 
+    border-radius: 50px;
+
+    color: white; 
+    font-family: 'Sulphur Point';
+    font-family: Montserrat;
+
+    font-size: 20px; 
+    font-weight: lighter; 
+
+    margin-top: 30px; 
+    padding-left: 40px; 
+    padding-right: 40px; 
+
+}
+#show-table:hover {
+    background-color: rgb(50, 50, 50);
+    cursor: pointer; 
+}
+
+.frame-row {
+    width: 80%; 
+    margin-top: 80px; 
+
+    border-radius: 50px; 
+
+    background: linear-gradient(to bottom, #DEE9E9, #DEE9E9 37%, #F4F4F4);
+
+    display: none; 
+
+}
+
+.spacer {
+    margin-top: 800px; 
+}
+
+#graph-title, #table-title {
+    font-family: Montserrat;
+    font-weight: 400; 
+}
+
+.dt-button.buttons-copy.buttons-html5, 
+.dt-button.buttons-csv.buttons-html5, 
+.dt-button.buttons-excel.buttons-html5, 
+.dt-button.buttons-pdf.buttons-html5, 
+.dt-button.buttons-print {
+    font-family: Montserrat !important;
+    background: none !important; 
+    background-color: white !important;
+    border-radius: 50px !important;
+    /* border: none;  */
+}
+
+.dt-info {
+    font-family: Montserrat; 
+    margin-top: 10px; 
+    font-weight: lighter; 
+    /* color: #6F8291 !important; */
+}
+
+.dt-paging {
+    font-family: Montserrat; 
+    margin-top: 10px; 
+}
+
+.dt-paging-button {
+    font-family: Montserrat; 
+    background: none; 
+
+}
+
+.dt-paging-button:hover {
+    font-family: Montserrat; 
+    background: none; 
+    border-radius: 20px; 
+}
+
+#dt-search-0 {
+    border-radius: 20px !important; 
+    /* border: solid 1px white;  */
+    margin-left: 10px; 
+}
+
+/* CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS CHARTS  */
+
+.apexcharts-legend-text {
+    font-family: Montserrat !important;
+
+}
+.apexcharts-legend.apexcharts-align-center.apx-legend-position-bottom {
+    /* margin-top: 10px;  */
+}
