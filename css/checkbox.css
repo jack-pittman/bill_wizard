@@ -33,7 +33,7 @@
     padding-left: 35px;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 15px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -58,6 +58,7 @@
     width: 25px;
     background-color: #eee;
     border-radius: 20px; 
+    margin-top: -3px; 
   }
   
   /* On mouse-over, add a grey background color */

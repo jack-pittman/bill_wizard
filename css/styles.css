@@ -43,8 +43,10 @@ html, body {
     font-family: 'Skranji';
     font-family: 'Sulphur Point';
     font-family: 'Bebas Neue'; 
+    /* font-family: 'Rammetto One';  */
 
-    font-weight: 100; 
+
+    /* font-weight: 100;  */
 
     font-size: 20px; 
 
@@ -90,8 +92,10 @@ html, body {
 .info-widget h3 {
     font-family: 'Skranji';
     font-family: 'Arial Black';
-    font-family: 'papyrus';
-    /* font-family: 'Bebas Neue'; */
+    /* font-family: 'papyrus'; */
+    font-family: 'Bebas Neue';
+    /* font-family: 'Rammetto One';  */
+
 
 
     font-weight: 800; 
@@ -103,8 +107,8 @@ html, body {
     margin: 0px; 
     padding: 3px; 
     margin-right: 7px; 
-    margin-left: 7px; 
-    margin-bottom: -5px; 
+    margin-left: 0px; 
+    margin-bottom: -2px; 
 }
 #jlogo {
     width: 70px; 

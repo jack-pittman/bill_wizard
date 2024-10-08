@@ -43,6 +43,12 @@
             alert("no file uploaded. please upload a file!");
         }
         else {
+            // SHOW GRAPH AND TABLE CONTAINERS
+            var frameRow = document.getElementsByClassName('frame-row');
+            for (var i = 0; i < frameRow.length; i++) {
+                frameRow[i].style.display = 'flex';
+            }
+
             showTable(addTagColumn(dataBucket)); // maybe call an "addTagColumn()"" function which, using a lookup table
             // showGraph();
             setTitles();
@@ -50,14 +56,14 @@
             priceAlert();
             createChart(flipRowsAndColumns(dataBucket));
 
-            // SHOW GRAPH AND TABLE CONTAINERS
-            var frameRow = document.getElementsByClassName('frame-row');
-            for (var i = 0; i < frameRow.length; i++) {
-                frameRow[i].style.display = 'flex';
-            }
 
             // HIDE 'CREATE REPORT' BUTTON
             tableButton.style.display = 'none';
+
+            //HIDE SPACER
+            var spacer = document.getElementsByClassName('spacer');
+            spacer[1].style.marginTop = '50px';
+
         }
     });
 
