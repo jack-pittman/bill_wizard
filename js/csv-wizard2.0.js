@@ -32,8 +32,15 @@
         // if a file is selected, convert the csv file to a nested array and 
         // assign it to dataBucket
         if (!!userFile.files && userFile.files.length > 0) {
+
+
+            
             // parseCSV(userFile.files[0]);
             csvWizard(userFile.files[0]);
+
+            // CHANGE BUTTON COLOR
+            var chooseFile = document.getElementsByClassName('choose-file');
+            chooseFile[0].style.backgroundColor = '#3197F5';
         }
     });
 
@@ -62,8 +69,7 @@
 
             //HIDE SPACER
             var spacer = document.getElementsByClassName('spacer');
-            spacer[1].style.marginTop = '50px';
-
+            spacer[0].style.marginTop = '50px';
         }
     });
 
